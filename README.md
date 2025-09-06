@@ -41,7 +41,7 @@ sudo docker run --net=host --env DISPLAY=$DISPLAY --env XAUTHORITY=/root/xxx --v
 Of course replace ```/run/user/100/gdm/Xauthority``` with your personal file name.
 Once inside the container, fire up the emulator using:
 ```
-./run_tme SUN3
+./run-tme SUN3
 ````
 
 Running on MacOS
@@ -58,7 +58,7 @@ docker run -e DISPLAY=host.docker.internal:0 -it sun3 /bin/bash
 ```
 Once inside the container, fire up the emulator using:
 ```
-./run_tme SUN3
+./run-tme SUN3
 ````
 
 Installing Solaris yourself
