@@ -1,10 +1,9 @@
 name: Publish Docker Image
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main # Change to your default branch if it is not main
+    tags:
+      - '*.*.*' # Start with tags like 1.0.0, 2.4.1, etc.
 
 jobs:
   push_to_registry:
@@ -29,6 +28,6 @@ jobs:
           context: .
           push: true
           tags: |
+            tisvonkje/sun3:${{ github.ref_name }}
             tisvonkje/sun3:latest
-            tisvonkje/sun3:${{ github.sha }}
 
