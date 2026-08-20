@@ -7,9 +7,7 @@ RUN apt-get update -y && \
     apt-get install -y git
 
 WORKDIR /sun3
-
-COPY tme-0.8.tar.gz /sun3
-RUN tar xzf tme-0.8.tar.gz
+ADD tme-0.8.tar.gz /sun3
 
 WORKDIR /sun3/tme-0.8
 ENV LIBS='-lX11 -lglib-2.0'
