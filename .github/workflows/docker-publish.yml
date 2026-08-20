@@ -30,4 +30,3 @@ jobs:
           tags: |
             tisvonkje/sun3:${{ github.ref_name }}
             tisvonkje/sun3:latest
-
